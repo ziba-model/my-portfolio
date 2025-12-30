@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/user/Downloads/chanchal_joshi_portfolio%20(5).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chanchal Joshi — Front‑End Portfolio</title>
+  <meta name="description" content="Portfolio of Chanchal Joshi — Front-end web developer (BCA student).">
+
+  <style>
+    /* ---------------- Theme + Reset ---------------- */
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb; --glass: rgba(255,255,255,0.6);
+      --radius:14px; --gap:22px; --maxw:1100px;
+      --shadow: 0 6px 18px rgba(16,24,40,0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#0f172a;line-height:1.45}
+    a{color:var(--accent);text-decoration:none}
+
+    /* ---------- Layout ---------- */
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#fff 0%,#f3f4f6 100%);display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo strong{font-size:18px}
+
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);font-weight:600}
+    .cta{padding:8px 14px;background:var(--accent);color:#fff;border-radius:10px;font-weight:600}
+
+    /* ---------- Hero ---------- */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;margin-top:28px}
+    .intro h1{font-size:32px;margin:0 0 8px}
+    .intro p{margin:0;color:var(--muted)}
+    .tags{margin-top:14px;display:flex;gap:8px}
+    .tag{background:var(--card);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted);box-shadow:var(--shadow)}
+
+    .hero-visual{background:linear-gradient(180deg,#fff,#fbfdff);padding:16px;border-radius:12px;box-shadow:var(--shadow);display:grid;place-items:center}
+    .hero-visual img{max-width:100%;border-radius:8px;display:block}
+
+    /* ---------- Cards ---------- */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:32px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+
+    .skills-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .skill{padding:8px 10px;background:var(--glass);border-radius:10px;color:var(--muted);font-weight:600}
+
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#fff,#fbfdff);cursor:pointer;transition:transform .18s}
+    .project:hover{transform:translateY(-6px)}
+    .project .thumb{height:140px;display:block;background:#e6eefb;display:grid;place-items:center}
+    .project .meta{padding:12px}
+    .project h4{margin:0 0 6px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+
+    /* ---------- Footer / Contact ---------- */
+    footer{margin-top:34px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+    /* ---------- Modal ---------- */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(3,7,18,0.45);padding:24px}
+    .modal.open{display:flex}
+    .modal .panel{width:900px;max-width:96%;background:var(--card);border-radius:12px;padding:20px;box-shadow:0 20px 60px rgba(2,6,23,0.35)}
+    .close{float:right;border:none;background:none;font-size:18px}
+
+    /* ---------- Responsive ---------- */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:repeat(2,1fr)}
+      .grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      nav{display:none}
+      .brand{gap:10px}
+      .projects{grid-template-columns:1fr}
+      .intro h1{font-size:24px}
+    }
+
+    /* small helper */
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><strong>CJ</strong></div>
+        <div>
+          <div style="font-weight:700">Chanchal Joshi</div>
+          <div class="small muted">Front‑End Developer (BCA)</div>
+        </div>
+      </div>
+
+      <nav aria-label="primary">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="chanchal Reume.pdf" download="">Download Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="intro">
+        <div class="intro">
+          <h1 id="intro">Hi, I'm <span style="color:var(--accent)">Chanchal Joshi</span>.</h1>
+          <p>I build clean, responsive user interfaces with <strong>HTML, CSS, and JavaScript</strong>. I'm looking for a front‑end internship where I can learn and contribute to real projects.</p>
+
+          <div class="tags" aria-hidden="true">
+            <div class="tag">HTML</div>
+            <div class="tag">CSS</div>
+            <div class="tag">JavaScript</div>
+            <div class="tag">Responsive Design</div>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <a class="cta" href="file:///C:/Users/user/Downloads/chanchal_joshi_portfolio%20(5).html#projects">See projects</a>
+            <a class="small muted" href="mailto:chanchal694@gmail.com">chanchal694@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Replace the src with the promotional photo you want to use. -->
+          <img src="you.jpg" alt="Hero project screenshot">
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h3>About Me</h3>
+          <p class="muted">I am a BCA student and an aspiring front‑end developer. I enjoy turning designs into pixel‑perfect websites and learning new front‑end technologies every week.</p>
+          <ul class="small muted" style="margin-top:10px">
+            <li>Strong fundamentals in HTML, CSS, and JavaScript</li>
+            <li>Responsive layouts and mobile-first approach</li>
+            <li>Comfortable with Git and basic UI/UX principles</li>
+          </ul>
+        </div>
+
+        <div class="card" id="skills">
+          <h3>Skills</h3>
+          <div class="skills-list">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript (ES6+)</div>
+            <div class="skill">Responsive Design</div>
+            <div class="skill">CSS Grid &amp; Flexbox</div>
+            <div class="skill">Git &amp; GitHub</div>
+            <div class="skill">Basic Accessibility</div>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top:22px">
+        <h3 id="projects">Projects</h3>
+        <p class="muted small">Click any project to view details — each card includes a short description and tech used.</p>
+
+        <div class="projects" style="margin-top:12px">
+          <article class="project" data-title="Apple Website Clone" data-desc="Built a clean Apple-style landing page using HTML, CSS, and JavaScript.&lt;br/&gt;Created a responsive layout with a modern hero section and product cards.&lt;br/&gt;Focused on simple UI, clean design, and mobile-friendly structure." data-tech="HTML • CSS • JavaScript" data-img="apple.png">
+            <div class="thumb"><img src="apple.png" alt="Apple clone preview" style="max-height:100%;max-width:100%"></div>
+            <div class="meta">
+              <h4>Apple Website Clone</h4>
+              <p class="muted">Landing page clone — header, hero, product cards, responsive breakpoints.</p>
+            </div>
+          </article>
+
+          <article class="project" data-title="Portfolio Website" data-desc="A simple personal portfolio showcasing my work, skills, and contact form." data-tech="HTML • CSS • JavaScript" data-img="portfolio.png">
+            <div class="thumb"><img src="portfolio.png" alt="Portfolio screenshot" style="max-height:100%;max-width:100%"></div>
+            <div class="meta">
+              <h4>Portfolio Website</h4>
+              <p class="muted">This portfolio page with projects and contact details.</p>
+            </div>
+          </article>
+
+          <article class="project" data-title="Coffee Website" data-desc="A modern coffee shop landing page with smooth UI, product cards, and responsive design." data-tech="HTML • CSS • JavaScript" data-img="coffee.png">
+            <div class="thumb"><img src="coffee.png" alt="Coffee website screenshot" style="max-height:100%;max-width:100%"></div>
+            <div class="meta">
+              <h4 style="color:#d6d4db;">Coffee Website</h4>
+
+              <p class="muted">Aesthetic landing page for a coffee shop.</p>
+            </div>
+          </article>
+
+          <article class="project" data-title="Amazon Clone" data-desc="Basic Amazon home page clone with product cards, nav bar, and responsive grid." data-tech="HTML • CSS • JavaScript" data-img="amazon.png">
+            <div class="thumb"><img src="amazon.png" alt="Amazon clone screenshot" style="max-height:100%;max-width:100%"></div>
+            <div class="meta">
+              <h4>Amazon Clone</h4>
+              <p class="muted">Simple Amazon homepage clone with clean layout.</p>
+            </div>
+          </article>
+
+         
+
+          <!-- Add more projects as you build them -->
+        </div>
+      </section>
+
+      <section style="margin-top:26px" class="card">
+        <h3>Quick How I Work</h3>
+        <p class="muted">I start by sketching the layout, write semantic HTML, then style with CSS. I test on mobile and desktop and make improvements for accessibility and performance.</p>
+      </section>
+
+      <section style="margin-top:18px" id="contact" class="card">
+        <h3>Contact</h3>
+        <p class="muted">Interested in working together? Send me a message and I’ll reply as soon as I can.</p>
+        <form id="contactForm" action="https://formspree.io/f/movgezlz" method="POST" style="margin-top:12px;display:flex;flex-direction:column;gap:8px;max-width:520px">
+  <input name="name" placeholder="Your name" required="" style="padding:10px;border-radius:8px;border:1px solid #e6eef5">
+  <input name="email" placeholder="Email" type="email" required="" style="padding:10px;border-radius:8px;border:1px solid #e6eef5">
+  <textarea name="message" placeholder="Short message" rows="4" required="" style="padding:10px;border-radius:8px;border:1px solid #e6eef5"></textarea>
+  <button type="submit" class="cta">Send message</button>
+  <div class="small muted">Message will be delivered to: <b>chanchal694@gmail.com</b></div>
+</form>
+      </section>
+
+      <footer>
+        <div class="small muted">© <span id="year">2025</span> Chanchal Joshi</div>
+        <div class="small muted">Built with ❤️ using HTML, CSS &amp; JavaScript</div>
+      </footer>
+
+<!-- INSTRUCTIONS TO ADD YOUR FILES
+1. Put your resume file in the same folder as this HTML and rename it to: Chanchal_Joshi_Resume.pdf
+2. Add your hero image and save it as: hero-image.png
+3. Add all project images inside the same folder and name them exactly:
+   - apple-clone.png
+   - coffee.png
+   - amazon-clone.png
+   - portfolio.png
+4. Update email anywhere you want directly inside the HTML.
+5. Upload all files together to GitHub or your hosting.
+-->
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="modal" role="dialog" aria-hidden="true">
+      <div class="panel" role="document">
+        <button class="close" id="closeModal">✕</button>
+        <div id="modalContent">
+          <!-- JS fills this -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Small client-side JS to make the portfolio interactive and "human-made" feel
+    // safe query
+document.querySelectorAll('.project').forEach(p=>p.addEventListener('click', ()=>{
+      const title = p.dataset.title || 'Project';
+      const desc = p.dataset.desc || '';
+      const tech = p.dataset.tech || '';
+      const img = p.dataset.img || '';
+
+      const content = document.getElementById('modalContent');
+      content.innerHTML = `
+        <h2 style="margin-top:0">${title}</h2>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="flex:1">
+            <p class=\"muted\">${desc}</p>
+            <p class=\"small muted\"><strong>Tech:</strong> ${tech}</p>
+            <p class=\"small muted\">See code on <a href=\"https://github.com/yourusername\" target=\"_blank\">GitHub</a> (replace with project link)</p>
+          </div>
+          <div style="width:240px;flex-shrink:0">
+            ${img?`<img src=\"${img}\" alt=\"${title} screenshot\" style=\"width:100%;border-radius:8px;\"/>`:''}
+          </div>
+        </div>
+      `;
+
+      document.getElementById('modal').classList.add('open');
+      document.getElementById('modal').setAttribute('aria-hidden','false');
+    }));
+
+    if (document.getElementById('closeModal')) document.getElementById('closeModal').addEventListener('click', ()=>{
+      document.getElementById('modal').classList.remove('open');
+      document.getElementById('modal').setAttribute('aria-hidden','true');
+    });
+
+    // contact form - attach a friendly submit feedback (Formspree handles the actual send)
+    (function(){
+      const contactForm = document.getElementById('contactForm'); // form exists check
+      if(contactForm){
+        contactForm.addEventListener('submit', function(e){
+          // Let the form submit normally to Formspree. Show a quick feedback to the user.
+          try{
+            // small UX: disable button briefly to prevent double submits
+            const btn = contactForm.querySelector('button[type="submit"]');
+            if(btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
+            setTimeout(()=>{ if(btn){ btn.disabled = false; btn.textContent = 'Send message'; } }, 3000);
+          }catch(err){/* ignore */}
+        });
+      }
+    })();
+
+    // small: substitute current year in footer
+    try{ document.getElementById('year').textContent = new Date().getFullYear(); }catch(e){}
+  </script>
+
+
+</body></html>
